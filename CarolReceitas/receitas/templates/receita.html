@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <!-- Preloader -->
+    <div id="preloader">
+        <i class="circle-preloader"></i>
+        <img src="{% static 'img/core-img/hamburger.png' %}" alt="">
+    </div>
+
+    <!-- Search Wrapper -->
+    <div class="search-wrapper">
+        <!-- Close Btn -->
+        <div class="close-btn"><i class="fa fa-times" aria-hidden="true"></i></div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <form action="#" method="post">
+                        <input type="search" name="search" placeholder="O que está procurando...">
+                        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include 'partials/menu.html' %}
+
+        <!-- Recipe Post Search -->
+        <div class="recipe-post-search mb-80">
+            <div class="container">
+                <form action="#" method="post">
+                    <div class="row">
+                        <div class="col-12 col-lg-5">
+                            <select name="select1" id="select1">
+                                <option value="1">Comida típica brasileira</option>
+                                <option value="1">Doces</option>
+                                <option value="1">Saudáveis</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-lg-2 text-right">
+                            <button type="submit" class="btn delicious-btn">Buscar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- recipe Slider -->
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="recipe-slider owl-carousel">
+                        <img src="{% static 'img/bg-img/tomate_banner.jpg' %}">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- recipe Content Area -->
+        <div class="recipe-content-area">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-12 col-md-8">
+                        <div class="recipe-headline my-5">
+                            <span>03 de janeiro de 2021</span>
+                            <h2>>Bolo com pedaços de maçã</h2>
+                            <div class="recipe-duration">
+                                <h6>Preparo: 45 minutos</h6>
+                                <h6>Rendimento: 6 porções</h6>
+                                <h6>Categoria: Bolos</h6>
+                                <h6>Por: Carol Lima</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="row">
+                    <div class="col-12 col-lg-8">
+                        <!-- Single Preparation Step -->
+                        <div class="single-preparation-step d-flex">
+                            <p>Corte as maçãs em pedaços pequenos e coloque o suco de meio limão para prevenir que os pedaços oxidem.
+                                <br>Numa vasilha, misture todos os ingredientes e, por último, coloque as maçãs.
+                                <br>Despeje a massa numa forma untada e enfarinhada e leve para assar por 30 minutos em fogo médio. </p>
+                        </div>
+                    </div>
+
+                    <!-- Ingredientes -->
+                    <div class="col-12 col-lg-4">
+                        <div class="ingredients">
+                            <h4>Ingredientes</h4>
+                            <div class="ingredients">
+                                <p>02 maçãs
+                                    <br>suco de meio limão
+                                    <br>03 ovos
+                                    <br>3/4 xícara de açúcar mascavo
+                                    <br>1/2 xícara de água, leite de vaca ou leite vegetal
+                                    <br>1/2 xícara de óleo de coco
+                                    <br>1/2 xícara de aveia em flocos
+                                    <br>3/4 xícara de farinha integral ou farelo de aveia
+                                    <br>01 colher de fermento químico
+                                    <br>01 colher de chá de canela em pó
+                                    <br>01 pitada de sal</td> </p>
+                            </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Ingredientes -->
+
+    {% include 'partials/footer.html' %}
+
+{% endblock %}
