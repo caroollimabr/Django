@@ -2,7 +2,7 @@
 
 {% block content %}  <!-- a partir daqui termina a visualizacao de base.html e comeca currenttodos.html -->
 
-<br> <br> To-do List
+<br> <br> Completed to-dos
 
 <ul>
     {% for todo in todos %}
@@ -10,6 +10,7 @@
         <a href="{% url 'viewtodo' todo.id %}">
         {% if todo.important %} <b> {% endif %}{{ todo.title }}{% if todo.important %} </b> {% endif %}
         {% if todo.description %} - {{ todo.description }} {% endif %}
+        {{ todo.date_completed|date:'M d Y H:i' }}
         </a>
     </li>
     {% endfor %}
